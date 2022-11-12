@@ -4,10 +4,15 @@ var currentPageId=1
 
 async function getProductsData()
 {
-    let data = await fetch(url)
-    products = await data.json()
-    showProducts(products,currentPageId)
-    showPagination(products)
+    try{
+        let data = await fetch(url)
+        products = await data.json()
+        showProducts(products,currentPageId)
+        showPagination(products)
+    }
+    catch(err){
+         console.log(err)
+    }
 
 }
 getProductsData()
