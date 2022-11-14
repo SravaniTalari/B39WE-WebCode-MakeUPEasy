@@ -37,7 +37,7 @@ function showProducts(products,pageNo)
     productDiv.innerHTML = `       
         <div class="card h-100">
         <img src=${element.image_link}     
-        alt="">
+        alt="${element.name}">
         <div class="card-body m-1 p-0">
             <h5 class="card-title p-1 w-100 text-center ">${element.name}</h5>
             <h6 class="card-subtitle mb-2"> Brand : ${element.brand}</h6>
